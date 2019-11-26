@@ -22,7 +22,7 @@ return toreturn;
 
 int main(int argc, char *argv[]){
 char *r;
-fgets(r, 20, stdin);
+fgets(r, 50, stdin);
 char first[100] ="which ls";
 char ** args=parse_args(r);
 //printf("%s\n",args[0]);
@@ -42,6 +42,7 @@ if (i<0) printf("error with ls %d\n",errno); */
 
 execvp(args[0],args);
 if (i<0) printf("error with ls %d\n",errno);
+free(args);
 
   return 0;
 }
