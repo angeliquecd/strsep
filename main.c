@@ -19,19 +19,20 @@ char ** parse_args(char *line){
 printf("\n");
 return toreturn;
 }
+
 int main(int argc, char *argv[]){
-//FILE r;
-//fgets(argv, 100, r);
-char first[100] ="ls -a -l";
-char ** args=parse_args(first);
+char *r;
+fgets(r, 20, stdin);
+char first[100] ="which ls";
+char ** args=parse_args(r);
 //printf("%s\n",args[0]);
 //printf("%s\n",args[1]);
 int i=0;
-/*while (i<4){
+while (i<4){
   printf("This is an argument: %s\n",args[i]);
   i++;
 }
-char * cmd[3];
+/*char * cmd[3];
 cmd[0]="ls";
 cmd[1]="-a";
 cmd[2]="-l";
