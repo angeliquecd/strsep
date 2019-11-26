@@ -8,16 +8,18 @@ char ** parse_args(char *line){
   char * token;
   char ** toreturn;
   int i=0;
-  while (curr){
+  while (curr && i<1){
   token = strsep(&curr," ");
-  char *(*toreturn +i) = curr;
+  printf("%s",token);
+  //char *(*toreturn +i) = curr;
   i++;
 }
+printf("\n");
 return toreturn;
 }
 int main(int argc, char *argv[]){
-FILE r;
-fgets(argv, 100, r);
-parse_args(argv);
+//FILE r;
+//fgets(argv, 100, r);
+parse_args("Hello my name is Angelique");
   return 0;
 }
