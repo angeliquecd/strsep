@@ -21,12 +21,13 @@ return toreturn;
 
 int main(int argc, char *argv[]){
 char r[50];
-fgets(r, 50, stdin);
-char first[100] ="which ls";
+//fgets(r, 50, stdin);
+char first[100] ="ls -a -l";
 //printf("Input: %s %s\n",argv[1],argv[2]);
-char ** args=parse_args(r);
+char ** args=parse_args(first);
 //printf("%s\n",args[0]);
 //printf("%s\n",args[1]);
+printf("Running command.\n");
 int i=0;
 /*while (i<6){
   printf("This is an argument: %s\n",args[i]);
